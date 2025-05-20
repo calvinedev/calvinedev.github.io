@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+}
+img{
+    width: 100%;
+    height: 200px;
+}
+h1{ 
+    font-size: 170%;
+    font-family: 'Lora';
+    text-align: center;
+}
+header{
+    font-size: 60px;
+    font-family: 'pacifico','cursive';
+    color: white;
+    text-shadow: 0 0 90px black;
+    padding: 90px 0 0 40px;
+}
+p{
+    text-align: justify;
+    padding: 10px;
+}
+footer{
+    padding: 8px;
+    background-size:  160px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEcW4alYZ-XUuL9KCYAgPq5A9Db9WfqA2cFyRhQ0hXVdgRA5bmrTrN1T7qAoDyVm1eVps&usqp=CAU");
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+li{
+    font-size: 20px;
+    padding: 2px;
+}
+a{
+    text-decoration: none;
+}
+nav a,nav li{
+    color: #ff7373;
+}
+
+.slogan{
+    display: block;
+    font-size: 35px;
+    font-family: 'roboto','arial','sans-serif';
+}
+.bienvenue{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-image: url("../image/ville.jpeg")
+}
+.choix_de_villes{
+    text-align: center;
+    font-size: 20px;
+}
+.ville{
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    border: 3px solid white;
+    border-radius: 40px;
+    font-size: 40px;
+    color: aliceblue;
+    text-shadow: 0 0 60px black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ville:hover{
+    border: 3px solid #ff7373;
+    -ms-transform: scale(1,1) translate(10px);
+    -webkit-transform: scale(1,1) translate(1Opx);
+    transform: scale(1,1) translate(10px);
+}
+.image-zoom{
+    overflow: hidden;
+}
+.flexbox_ville{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    gap: 40px;
+    margin: 0 25px 0 25px; 
+}
+#voir{
+    display: inline-flex;
+    align-items: center; 
+    color: #ff7373; 
+    text-shadow: 0 0 1px black;
+    transition: all 1s;
+    gap:0;
+}
+#voir:hover{
+    gap: 10px;
+}
+#Libreville{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxVf9A3whkBLih1naUW6tNnuAALP637yc4SA&s");
+}
+#New_york{
+    grid-column: 2 / 4;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/1200px-New_york_times_square-terabass.jpg");
+}
+#Tokyo{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ90r8vOgItHEvMbg_1ZF-ds8pgRcUVWL3xIg&s");
+}
+#Pékin{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVuCn4e-vSwyvlPLHUcp7L-bCNT9NKO2gYBA&s")
+}
+#Nice{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzj-N-w-hbG1XDfLQq6CDcnn98xNrXoS3icw&s");
+}
+#Franceville{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1f/Franceville.jpg");
+}
+#Washinton{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1gJoHY9stWBVciomdT59DtUuQM_LsCduSQQ&s");
+    grid-column: 2 / 4;
+}
+#baie_des_rois{
+    grid-column: 1 / 3;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaxVWOOKZMZ-Q2f655XXikklkcW6XvXmnr8w&s")
+}
+#flexbox_foot{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.conteneur{
+    width: 1350px;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 1350px){
+    .conteneur{
+        width: 800px;
+    }
+    .flexbox_ville{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #New_york{
+        grid-column: 1 / 3;
+    }
+    #Washinton{
+        grid-column: 1 / 3;
+    }
+    #baie_des_rois{
+        grid-column: 1 / 3;
+    }
+}
+
+@media all and (max-width: 800px){
+    .conteneur{
+        width: 500px;
+    }
+    .flexbox_ville{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #New_york{
+        grid-column: auto;
+    }
+    #Washinton{
+        grid-column:  auto;
+    }
+    #baie_des_rois{
+        grid-column:  auto;
+    }
+    #flexbox_foot{
+        flex-direction: column;
+    }
+    #logo_foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 500px){
+    .conteneur{
+        width: 100%;
+    }
+    .flexbox_ville{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #New_york{
+        grid-column: auto;
+    }
+    #Washinton{
+        grid-column: auto;
+    }
+    #baie_des_rois{
+        grid-column: auto;
+    }
+    #flexbox_foot{
+        flex-direction: column;
+    }
+    #logo_foot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
